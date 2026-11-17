@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>List All Products</title>
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+ <table class="table table-striped">
+ <thead>
+ <tr>
+<th>Make</th>
+ <th>Model</th>
+ <th>Price</th>
+ </tr>
+ </thead>
+ <tbody>
+ {% for product in catalog %}
+ <tr>
+ <td>{{ product.make }}</td>
+ <td>{{ product.model }}</td>
+ <td>{{ product.price }}</td>
+ </tr>
+ {% endfor %}
+ </tbody>
+ </table>
+</body>
+</html>
